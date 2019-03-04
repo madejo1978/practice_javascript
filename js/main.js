@@ -1,3 +1,7 @@
+/* ************
+*** VARIABLES
+ **************/
+
 console.log("is JS goed gekoppeld in HTML?")
 let entree = 'Enchiladas';
 console.log(entree);
@@ -24,6 +28,11 @@ console.log(typeof newVariable);
 newVariable = 1;
 console.log(newVariable);
 console.log(typeof newVariable);
+
+
+/* ************
+*** FUNCTIONS
+ **************/
 
 // functions
     // We use parameters as placeholders for information that will be passed to the function when it is called.
@@ -88,7 +97,7 @@ greetInSpanish();
      
     // arrow functions =>
         // a shorter way to write functions by using the special "fat arrow" () => notation.
-        const plantNeedsWater = (day) => {
+        const plantNeedsWaterv2 = (day) => {
             if (day === 'Wednesday') {
               return true;
             } else {
@@ -100,8 +109,105 @@ greetInSpanish();
            // single line block: removing the parenthesis and return    
            // multi-line block 
         
+ /***************
+ *** CONDITIONAL STATEMENTS
+ **************/
+      
+    // if .. else statement
+    let sale = true;
 
+    sale = true;
+    
+    if(sale) {
+      console.log('Time to buy!');
+    } else {
+      console.log('Time to wait for a sale.');
+    };   
 
+    // Comparison Operators
+      // > < <= .+ === !==
+    let hungerLevel = 7;
+    
+    hungerLevel = 8;
 
+    if(hungerLevel > 7){console.log ('Time to eat!')
+    } else {console.log ('We can eat later!'); 
+    }
 
-        
+    // Logical Operators (booleans)
+      // && ! ||
+
+      let mood = 'sleepy';
+      let tirednessLevel = 9;
+
+      if(mood === 'sleepy' && tirednessLevel > 8){         
+      console.log('bedtime!')
+      } else{console.log('not bedtime yet!')
+      }
+    
+    // Truthy and Falsy
+      // to check if a variable exists, if the variable has a value: thruthy, empty: falsy
+      // 0, "" or '', null, undefined, NaN or Not a Number
+      let favoritePhrase = '';
+
+      if (favoritePhrase) {
+        console.log("This string doesn't seem to be empty.");
+      } else {
+        console.log('This string is definitely empty.');
+      }
+
+    // Truthy and Falsy Assignment
+      // practical for checking username for personolized greeting, the so called 'short-circuit evaluation'
+ 
+      let userName = '';
+      let user = userName || 'Guest' // || operator is used to short-cut evaluate
+
+      console.log(`Welcome ${user} `);
+
+    //  Ternary Operator
+      // shorter writing of an if ... else statements
+      let isNightTime = true;
+
+      if (isNightTime) {
+        console.log('Turn on the lights!');
+      } else {
+        console.log('Turn off the lights!');
+      }
+      // to:
+      isNightTime ? console.log('Turn on the lights!') : console.log('Turn off the lights!');
+
+    // Else If Statements
+      // The else if statement always comes after the if statement,  
+      // and before the else statement. The else if statement also takes a condition.
+    let season = 'summer';
+
+    if (season === 'spring') {
+      console.log('It\'s spring! The trees are budding!');
+    } else if (season === 'fall') {
+      console.log('It\'s fall! Leaves are falling!')
+    } else if (season === 'winter') {
+      console.log('It\'s winter! Everything is covered in snow.')
+    } else if(season === 'summer'){
+      console.log('It\'s sunny and warm because it\'s summer!')
+    } else {
+      console.log('Invalid season.');
+    }
+ 
+    // The switch keyword
+      // alternative for Else IF, easer to read and write, but practical when you have to check lots of values
+    let athleteFinalPosition = '';
+    
+    switch (athleteFinalPosition){
+      case 'first place':
+      console.log('You get the gold medal!');
+      break; 
+      case 'second place':
+      console.log('You get the silver medal!');
+      break; 
+      case 'third place':
+      console.log('You get the bronze medal!');
+      break;
+      default:
+      console.log('You are a loser');
+      break; 
+    }  
